@@ -8,6 +8,10 @@ class Home extends StatefulWidget {
 
 class _HomeState extends State<Home> {
 
+  String link_download = "Link Download";
+  String file_name = "File Name";
+
+
   int _currentIndex = 0;
   PageController _pageController;
 
@@ -181,6 +185,96 @@ class _HomeState extends State<Home> {
                       indent: 30,
                       endIndent: 30,
                       color: Colors.black,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 30, 0, 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          RaisedButton.icon(
+                            onPressed: () {},
+                            icon: Icon(Icons.insert_drive_file),
+                            color: Colors.pinkAccent[100],
+                            label: Text(
+                              "Browse File",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(
+                            "File Name:",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "$file_name",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 30, 0, 10),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.start,
+                        children: <Widget>[
+                          RaisedButton.icon(
+                            onPressed: () {},
+                            icon: Icon(Icons.file_upload),
+                            color: Colors.greenAccent[100],
+                            label: Text(
+                              "Upload",
+                              style: TextStyle(
+                                fontSize: 17,
+                                fontWeight: FontWeight.normal,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text(
+                            "Download Link:",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          Text(
+                            "$link_download",
+                            style: TextStyle(
+                              fontSize: 14,
+                              fontWeight: FontWeight.normal,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 80,),
+                    RaisedButton.icon(
+                      onPressed: () {},
+                      icon: Icon(Icons.cloud_done),
+                      label: Text("My Files")
                     ),
                   ],
                 ),
